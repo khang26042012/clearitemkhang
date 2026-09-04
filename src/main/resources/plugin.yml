@@ -1,0 +1,6 @@
+name: ClearItemKhang
+version: 1.0.0
+main: com.khang.clearitemkhang.ClearItemKhang
+api-version: '1.21'
+description: Auto clear dropped items every 5 minutes
+author: khang26042012

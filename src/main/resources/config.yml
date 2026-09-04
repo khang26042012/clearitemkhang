@@ -1,0 +1,12 @@
+# ClearItemKhang - Configuration
+
+# Interval in minutes between auto-clears
+interval-minutes: 5
+
+# Message broadcast when items are cleared
+# Use {count} to show how many items were removed
+# Use {minutes} to show the interval
+broadcast-message: "&6[ClearItemKhang] &eCleared &c{count} &edropped items! (Every {minutes} minutes)"
+
+# Broadcast in console too? (true/false)
+console-log: true
