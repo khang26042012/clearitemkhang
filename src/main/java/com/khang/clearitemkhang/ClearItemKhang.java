@@ -119,9 +119,16 @@ public class ClearItemKhang extends JavaPlugin {
 
     private void clearItems(String lucky) {
         int count = 0;
+        int skipped = 0;
         for (World world : Bukkit.getWorlds()) {
             for (Entity entity : world.getEntities()) {
                 if (entity instanceof Item) {
+                    Item item = (Item) entity;
+                    // KHONG xoa Trung Rong (EggKhang) - de event truy lung tiep tuc
+                    if (item.getItemStack() != null && item.getItemStack().getType() == org.bukkit.Material.DRAGON_EGG) {
+                        skipped++;
+                        continue;
+                    }
                     entity.remove();
                     count++;
                 }
@@ -137,7 +144,7 @@ public class ClearItemKhang extends JavaPlugin {
             Bukkit.broadcastMessage(msg);
         }
         if (consoleLog) {
-            getLogger().info("Lao cong " + (lucky == null ? "(khong ai online)" : lucky) + " da don " + count + " vat pham roi.");
+            getLogger().info("Lao cong " + (lucky == null ? "(khong ai online)" : lucky) + " da don " + count + " vat pham roi." + (skipped > 0 ? " (bo qua " + skipped + " Trung Rong)" : ""));
         }
     }
 }
