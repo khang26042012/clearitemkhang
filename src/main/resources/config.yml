@@ -1,23 +1,23 @@
-# ClearItemKhang v1.1.0 - Lao cong may man
+# ClearItemKhang v1.2.0 - Lao công may mắn (tiếng Việt có dấu)
 
-# Moi bao nhieu phut don 1 lan
+# Mỗi bao nhiêu phút dọn 1 lần
 interval-minutes: 5
 
-# Canh bao truoc bao nhieu giay (dem nguoc 5..1 giay cuoi)
+# Cảnh báo trước bao nhiêu giây (đếm ngược 5..1 giây cuối)
 warning-seconds: 10
 
-# {player} = lao cong may man (random online), {seconds} = so giay con lai
-warn-message: "&6[Lao Cong] &eLao cong may man cua ngay hom nay &b{player} &ese den don dep sau &c{seconds} &egiay nua, nho cat do ki vao!"
-# Khi khong co ai online -> bo trong ten
-warn-empty-message: "&6[Lao Cong] &eSe den don dep sau &c{seconds} &egiay nua, nho cat do ki vao!"
+# {player} = lao công may mắn (random online), {seconds} = số giây còn lại
+warn-message: "&6[🧹 Lao Công] &eLao công may mắn của ngày hôm nay &b{player} &esẽ đến dọn dẹp sau &c{seconds} &egiây nữa, nhớ cất đồ kĩ vào!"
+# Khi không có ai online -> bỏ trống tên
+warn-empty-message: "&6[🧹 Lao Công] &eSẽ đến dọn dẹp sau &c{seconds} &egiây nữa, nhớ cất đồ kĩ vào!"
 
-# Dem nguoc 5..1 (chi hien neu warning-seconds >= so giay do)
-countdown-message: "&6[Lao Cong] &eDon dep sau &c{seconds} &egiay...!"
+# Đếm ngược 5..1 (chỉ hiện nếu warning-seconds >= số giây đó)
+countdown-message: "&6[🧹 Lao Công] &eDọn dẹp sau &c{seconds} &egiây...!"
 
-# {player} = lao cong, {count} = so vat pham, {minutes} = chu ky
-# Chi broadcast khi count > 0
-done-message: "&6[Lao Cong] &b{player} &eda don xong &c{count} &evat pham roi!"
-done-empty-message: "&6[Lao Cong] &eda don xong &c{count} &evat pham roi!"
+# {player} = lao công, {count} = số vật phẩm, {minutes} = chu kỳ
+# Chỉ broadcast khi count > 0
+done-message: "&6[🧹 Lao Công] &b{player} &eđã dọn xong &c{count} &evật phẩm rơi!"
+done-empty-message: "&6[🧹 Lao Công] &eĐã dọn xong &c{count} &evật phẩm rơi!"
 
 # Log console?
 console-log: true

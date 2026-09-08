@@ -32,7 +32,7 @@ public class ClearItemKhang extends JavaPlugin {
         saveDefaultConfig();
         loadConfig();
         startCycle();
-        getLogger().info("ClearItemKhang v" + getDescription().getVersion() + " enabled! Clear moi " + intervalMinutes + " phut, canh bao truoc " + warningSeconds + " giay.");
+        getLogger().info("ClearItemKhang v" + getDescription().getVersion() + " đã bật! Dọn mỗi " + intervalMinutes + " phút, cảnh báo trước " + warningSeconds + " giây.");
     }
 
     @Override
@@ -47,11 +47,11 @@ public class ClearItemKhang extends JavaPlugin {
         reloadConfig();
         intervalMinutes = Math.max(1, getConfig().getInt("interval-minutes", 5));
         warningSeconds = Math.max(0, getConfig().getInt("warning-seconds", 10));
-        warnMessage = getConfig().getString("warn-message", "&6[Lao Cong] &eLao cong may man cua ngay hom nay &b{player} &ese den don dep sau &c{seconds} &egiay nua, nho cat do ki vao!");
-        warnEmptyMessage = getConfig().getString("warn-empty-message", "&6[Lao Cong] &eSe den don dep sau &c{seconds} &egiay nua, nho cat do ki vao!");
-        countdownMessage = getConfig().getString("countdown-message", "&6[Lao Cong] &eDon dep sau &c{seconds} &egiay...!");
-        doneMessage = getConfig().getString("done-message", "&6[Lao Cong] &b{player} &eda don xong &c{count} &evat pham roi!");
-        doneEmptyMessage = getConfig().getString("done-empty-message", "&6[Lao Cong] &eda don xong &c{count} &evat pham roi!");
+        warnMessage = getConfig().getString("warn-message", "&6[🧹 Lao Công] &eLao công may mắn của ngày hôm nay &b{player} &esẽ đến dọn dẹp sau &c{seconds} &egiây nữa, nhớ cất đồ kĩ vào!");
+        warnEmptyMessage = getConfig().getString("warn-empty-message", "&6[🧹 Lao Công] &eSẽ đến dọn dẹp sau &c{seconds} &egiây nữa, nhớ cất đồ kĩ vào!");
+        countdownMessage = getConfig().getString("countdown-message", "&6[🧹 Lao Công] &eDọn dẹp sau &c{seconds} &egiây...!");
+        doneMessage = getConfig().getString("done-message", "&6[🧹 Lao Công] &b{player} &eđã dọn xong &c{count} &evật phẩm rơi!");
+        doneEmptyMessage = getConfig().getString("done-empty-message", "&6[🧹 Lao Công] &eĐã dọn xong &c{count} &evật phẩm rơi!");
         consoleLog = getConfig().getBoolean("console-log", true);
     }
 
@@ -144,7 +144,7 @@ public class ClearItemKhang extends JavaPlugin {
             Bukkit.broadcastMessage(msg);
         }
         if (consoleLog) {
-            getLogger().info("Lao cong " + (lucky == null ? "(khong ai online)" : lucky) + " da don " + count + " vat pham roi." + (skipped > 0 ? " (bo qua " + skipped + " Trung Rong)" : ""));
+            getLogger().info("Lao công " + (lucky == null ? "(không ai online)" : lucky) + " đã dọn " + count + " vật phẩm rơi." + (skipped > 0 ? " (bỏ qua " + skipped + " Trứng Rồng)" : ""));
         }
     }
 }
