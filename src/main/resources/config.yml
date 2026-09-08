@@ -1,0 +1,23 @@
+# ClearItemKhang v1.1.0 - Lao cong may man
+
+# Moi bao nhieu phut don 1 lan
+interval-minutes: 5
+
+# Canh bao truoc bao nhieu giay (dem nguoc 5..1 giay cuoi)
+warning-seconds: 10
+
+# {player} = lao cong may man (random online), {seconds} = so giay con lai
+warn-message: "&6[Lao Cong] &eLao cong may man cua ngay hom nay &b{player} &ese den don dep sau &c{seconds} &egiay nua, nho cat do ki vao!"
+# Khi khong co ai online -> bo trong ten
+warn-empty-message: "&6[Lao Cong] &eSe den don dep sau &c{seconds} &egiay nua, nho cat do ki vao!"
+
+# Dem nguoc 5..1 (chi hien neu warning-seconds >= so giay do)
+countdown-message: "&6[Lao Cong] &eDon dep sau &c{seconds} &egiay...!"
+
+# {player} = lao cong, {count} = so vat pham, {minutes} = chu ky
+# Chi broadcast khi count > 0
+done-message: "&6[Lao Cong] &b{player} &eda don xong &c{count} &evat pham roi!"
+done-empty-message: "&6[Lao Cong] &eda don xong &c{count} &evat pham roi!"
+
+# Log console?
+console-log: true
